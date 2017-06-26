@@ -1,4 +1,3 @@
-# Backup-task
 
 # Requisites
 
@@ -50,7 +49,25 @@ Right now, we develop only 2 notifiers:
 * Email: Send email using swiftmailer
 * PushOver: Send notification using pushover API (you need to buy a license)
 
+# Settings
 
+Settings are stored in `settings.yml` file. The options are:
+
+`
+mysql:
+  days_to_rotate: XX // Days hold SQL dumps. Older backup files will be erased,
+
+notifier:
+  class: \NameSpance\Notifier // Class used to send notificacion. Notifier class MUST implements NotifyInterface
+  
+  # Push over
+  token: [token]
+  user: [user]
+  
+  # email
+  to: [to email]
+  from: [sender email. Not required]
+' 
 
 
 
