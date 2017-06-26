@@ -53,7 +53,7 @@ Right now, we develop only 2 notifiers:
 
 Settings are stored in `settings.yml` file. The options are:
 
-`mysql:
+```mysql:
   days_to_rotate: XX #Days hold SQL dumps. Older backup files will be erased,
 
 notifier:
@@ -66,7 +66,7 @@ notifier:
   #email
   to: [to email]
   from: [sender email. Not required]
-`
+```
 
 
 
