@@ -1,0 +1,12 @@
+mysql:
+  days_rotate: 30
+
+notifier:
+  class: \Backup\Notify\Email
+  to: your@emailhere.com
+
+  # You also can use Pushover as notifier
+  #class: \Backup\Notify\PushOver
+  #token: [TOKEN]
+  #user: [USER]
+

@@ -1,0 +1,42 @@
+imports:
+  - {
+      resource: 'mysql.yml',
+      defaults: {
+        local_dir: '/my/backup/local/folder',
+        local: '[task-name]',
+      }
+    }
+  - {
+      resource: 'www.yml',
+      defaults: {
+        localBasePath: '/my/backup/local/folder',
+        local: '[task-name]',
+      }
+    }
+  - {
+      resource: 'drupal.yml',
+      defaults: {
+        localBasePath: '/my/backup/local/folder',
+        local: '[task-name]',
+        exclude: [
+          'cache',
+          'files/less',
+          'files/styles',
+          'files/css',
+          'files/js',
+          'files/ctools'
+        ]
+      }
+    }
+  - {
+      resource: 'checkMD5.yml',
+      defaults: {
+        localBasePath: '/my/local/checksums/',
+        checksumFile: '[task-name].chksum',
+        exclude: [
+          '*/files/*',
+          '*/cache/*',
+          '*/.git/*'
+        ]
+      }
+    }

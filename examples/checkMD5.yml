@@ -1,0 +1,3 @@
+server_md5:
+  type: MD5check
+  remote: myuser@myserver:/var/www/vhosts/myweb/httpdocs

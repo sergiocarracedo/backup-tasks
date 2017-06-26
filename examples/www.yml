@@ -1,0 +1,6 @@
+myregularweb:
+  type: Rsync
+  remote: myuser@myserver:/var/www/vhosts/myweb/httpdocs
+  exclude: [
+    'cache',
+  ]

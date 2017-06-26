@@ -1,0 +1,3 @@
+mydrupalweb:
+  type: Rsync
+  remote: myuser@myserver:/var/www/vhosts/myweb/httpdocs/sites/default

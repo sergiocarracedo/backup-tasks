@@ -1,0 +1,18 @@
+server1_mysql:
+  type: Mysql
+  host: [HOST IP OR DOMAIN]
+  user: [myuser]
+  pass: [mypassword]
+  exclude_databases:
+    - database1
+    - information_schema
+    - database2
+
+server2_mysql:
+   type: Mysql
+   host: 127.0.0.1
+   user: root
+   port: 3307
+   pass: '[YOUR-DATABASE-PASS]'
+   prefix: 'server2-'
+   ssh_tunnel: '-L 3307:localhost:3306 root@server1'
