@@ -1,13 +1,13 @@
-# backup-task
+# Backup-task
 
 # Requisites
 
 PHP >=7.0
 Composer
 
-You need to install dependencies using
-`composer install`
+# Installation
 
+You need to install dependencies using `composer install`
 
 # Basic configuracion
 
@@ -27,6 +27,28 @@ if yo only nedd run task in a type
 
 `./backup.php run-tasks --type MD5check -T /pathTo/my/tasks.yml`
 
+
+# Task types
+
+Out the box, we provide abstract tasks:
+* Files: Backups files from remote filesystem
+* Database: Backup databases
+
+This task are unusable for real task, but other tasks inherits from they.
+
+Implemented tasks are:
+
+* Mysql: Backup MySQL databases
+* Rsync: Backup files using rsync
+* MD5Check: Create a MD5 hash for every file and compares with previous. Useful to check files integritiy and detect intrusions.
+
+We plan make more tasks, for example: FTP backup for files, PostgreSQL, etc
+
+# Notifiers
+Right now, we develop only 2 notifiers: 
+
+* Email: Send email using swiftmailer
+* PushOver: Send notification using pushover API (you need to buy a license)
 
 
 
