@@ -54,19 +54,19 @@ Right now, we develop only 2 notifiers:
 Settings are stored in `settings.yml` file. The options are:
 
 `mysql:
-  days_to_rotate: XX // Days hold SQL dumps. Older backup files will be erased,
+  days_to_rotate: XX #Days hold SQL dumps. Older backup files will be erased,
 
 notifier:
-  class: \NameSpance\Notifier // Class used to send notificacion. Notifier class MUST implements NotifyInterface
+  class: \NameSpance\Notifier #Class used to send notificacion. Notifier class MUST implements NotifyInterface
   
-  # Push over
+  #Push over
   token: [token]
   user: [user]
   
-  # email
+  #email
   to: [to email]
-  from: [sender email. Not required]
-' 
+  from: [sender email. Not required]
+`
 
 
 
